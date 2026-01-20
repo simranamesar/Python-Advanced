@@ -1,0 +1,50 @@
+-gwet a existing github repo into your local machine:
+ 
+git clone <github remote url>
+
+-create and checkout to a new branch 
+git checkout -b <new branch name>
+
+-create and track a new remote branch
+git push -u origin <new remote brnanch name>
+
+-make existing local branch track existing remote branch
+git branch --set-upstream-to=origin/<existing remote branch name> 
+
+-checkout to an existing branch
+git checkout <branch name>
+
+-include files to be committed
+git add <file name> 
+git add -A  (use carefully and verify the file list)
+
+-commit added files
+git commit -m "<commit message>"
+
+-merge local branches
+git merge <incoming branch name>
+
+-merge remote branch changes into local branch after tracking
+git pull (pull is a combination of git fetch + git merge (remote branch)
+
+-only fetch changes from remote
+git fetch
+
+-switch to local branch and point to an existing remote branch (-c localbranchName origin/remoteBranchName , keeping local and remote branch name same)
+ git switch -c myBranch origin/myBranch 
+
+-travel in history and cherry pick a commit
+git cherry-pick <commit-hash>
+
+- make and existing local machine folder into a git repo locally 
+git init
+git remote add origin <github remote url>
+
+	--if remote repo created with readme file:
+	git fetch
+	git branch --set-upstream-to=origin/master
+	git pull --allow-unrelated-histories
+
+
+	--if remote repo created without readme file
+	git push -u origin master
